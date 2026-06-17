@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Adélaïde Ruth - Designer Graphique Créatif. Portfolio professionnel avec projets de branding, design graphique et UI/UX.">
+    <meta name="keywords" content="designer graphique, portfolio, branding, graphisme, création visuelle">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Adélaïde Ruth - Designer Graphique Professionnel">
+    <title>Adélaïde Ruth | Designer Graphique Premium</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Syne:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="bg-black text-white overflow-x-hidden">
+    <!-- Scroll Progress Bar -->
+    <div id="scrollProgress" class="fixed top-0 left-0 h-1 bg-gradient-to-r from-amber-400 via-orange-400 to-amber-500 z-50" style="width: 0%"></div>
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 z-40 bg-black/80 backdrop-blur-md border-b border-white/5">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+            <div class="text-2xl font-bold bg-gradient-to-r from-amber-400 to-orange-400 bg-clip-text text-transparent">
+                ADR
+            </div>
+            <ul class="hidden md:flex items-center gap-8">
+                <li><a href="#hero" class="nav-link">Accueil</a></li>
+                <li><a href="#about" class="nav-link">À propos</a></li>
+                <li><a href="#services" class="nav-link">Services</a></li>
+                <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
+                <li><a href="#skills" class="nav-link">Compétences</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <button id="menuBtn" class="md:hidden text-2xl">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="hidden md:hidden bg-black/95 border-t border-white/5">
+            <ul class="flex flex-col gap-4 p-6">
+                <li><a href="#hero" class="block py-2">Accueil</a></li>
+                <li><a href="#about" class="block py-2">À propos</a></li>
+                <li><a href="#services" class="block py-2">Services</a></li>
+                <li><a href="#portfolio" class="block py-2">Portfolio</a></li>
+                <li><a href="#skills" class="block py-2">Compétences</a></li>
+                <li><a href="#contact" class="block py-2">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="min-h-screen flex items-center justify-center pt-20 px-6 relative overflow-hidden">
+        <!-- Background Elements -->
+        <div class="absolute top-0 right-0 w-96 h-96 bg-amber-500/10 rounded-full blur-3xl -z-10"></div>
+        <div class="absolute bottom-0 left-0 w-96 h-96 bg-orange-500/10 rounded-full blur-3xl -z-10"></div>
+
+        <div class="max-w-4xl mx-auto text-center">
+            <!-- Tagline -->
+            <div class="inline-block mb-8 px-6 py-2 rounded-full bg-white/5 border border-amber-400/30 text-sm font-medium text-amber-300">
+                Designs créatifs qui marquent les esprits
+            </div>
+
+            <!-- Main Title -->
+            <h1 class="text-6xl md:text-8xl font-bold mb-6 leading-tight hero-title">
+                Adélaïde Ruth
+            </h1>
+
+            <!-- Subtitle with animation -->
+            <p class="text-2xl md:text-3xl text-white/70 mb-8 font-light">
+                <span class="inline-block animated-text">Designer Graphique</span>
+                <span class="inline-block animated-text" style="animation-delay: 0.1s;">Créative</span>
+                <span class="inline-block animated-text" style="animation-delay: 0.2s;">Experte</span>
+            </p>
+
+            <!-- Description -->
+            <p class="text-lg text-white/50 mb-12 max-w-2xl mx-auto leading-relaxed">
+                Je transforme vos idées en expériences visuelles captivantes. Spécialisée en branding, design graphique et création d'identités visuelles modernes.
+            </p>
+
+            <!-- CTA Buttons -->
+            <div class="flex flex-col sm:flex-row gap-6 justify-center items-center mb-16">
+                <a href="#portfolio" class="group px-8 py-4 bg-gradient-to-r from-amber-400 to-orange-400 text-black font-bold rounded-lg hover:shadow-2xl hover:shadow-amber-500/50 transition-all duration-300 flex items-center gap-2">
+                    Voir mes réalisations
+                    <i class="fas fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                </a>
+                <a href="#contact" class="px-8 py-4 border-2 border-amber-400 text-amber-300 font-bold rounded-lg hover:bg-amber-400/10 transition-all duration-300">
+                    Me contacter
+                </a>
+            </div>
+
+            <!-- Scroll Indicator -->
+            <div class="flex justify-center items-center gap-2 text-white/40">
+                <span>Scroll pour découvrir</span>
+                <i class="fas fa-chevron-down animate-bounce"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-24 px-6 bg-white/2">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-5xl md:text-6xl font-bold mb-20 text-center">
+                À <span class="bg-gradient-to-r from-amber-400 to-orange-400 bg-clip-text text-transparent">Propos</span>
+            </h2>
+
+            <div class="grid md:grid-cols-2 gap-16 items-center">
+                <!-- Image -->
+                <div class="relative">
+                    <div class="w-full aspect-square rounded-2xl overflow-hidden border-2 border-amber-400/20">
+                        <img src="images/profil.png" alt="Adélaïde Ruth" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
+                    </div>
+                    <div class="absolute -bottom-6 -right-6 w-24 h-24 bg-gradient-to-r from-amber-400 to-orange-400 rounded-2xl -z-10"></div>
+                </div>
+
+                <!-- Content -->
+                <div class="space-y-8">
+                    <div>
+                        <h3 class="text-2xl font-bold text-amber-400 mb-4">Parcours</h3>
+                        <p class="text-white/70 leading-relaxed">
+                            Diplômée de l'École Internationale de Graphisme "Eig", j'ai transformé ma passion pour l'art visuel en expertise professionnelle. Plus de 5 ans d'expérience dans la création d'identités visuelles innovantes et mémorables.
+                        </p>
+                    </div>
+
+                    <div>
+                        <h3 class="text-2xl font-bold text-amber-400 mb-4">Expertise</h3>
+                        <p class="text-white/70 leading-relaxed">
+                            Je combine l'intuition créative avec la stratégie marketing pour créer des designs qui non seulement séduisent l'œil, mais génèrent aussi des résultats tangibles pour mes clients.
+                        </p>
+                    </div>
+
+                    <div>
+                        <h3 class="text-2xl font-bold text-amber-400 mb-4">Valeurs</h3>
+                        <p class="text-white/70 leading-relaxed">
+                            Authenticité, innovation et excellence sont mes piliers. Chaque projet est traité comme une opportunité de créer quelque chose d'extraordinaire.
+                        </p>
+                    </div>
+
+                    <div class="flex gap-4 pt-4">
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-amber-400">50+</div>
+                            <div class="text-sm text-white/50">Projets réalisés</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-amber-400">30+</div>
+                            <div class="text-sm text-white/50">Clients satisfaits</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-amber-400">5+</div>
+                            <div class="text-sm text-white/50">Années d'exp</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-24 px-6">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-5xl md:text-6xl font-bold mb-20 text-center">
+                <span class="bg-gradient-to-r from-amber-400 to-orange-400 bg-clip-text text-transparent">Services</span>
+            </h2>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service Card 1 -->
+                <div class="group service-card p-8 rounded-xl border border-white/10 hover:border-amber-400/50 bg-white/2 hover:bg-white/5 transition-all duration-300">
+                    <div class="text-5xl mb-6 text-amber-400 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-palette"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Identité Visuelle</h3>
+                    <p class="text-white/60">Création complète d'identités visuelles et chartes graphiques cohérentes.</p>
+                </div>
+
+                <!-- Service Card 2 -->
+                <div class="group service-card p-8 rounded-xl border border-white/10 hover:border-amber-400/50 bg-white/2 hover:bg-white/5 transition-all duration-300">
+                    <div class="text-5xl mb-6 text-amber-400 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-pen-nib"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Logo Design</h3>
+                    <p class="text-white/60">Logos mémorables et intemporels qui représentent l'essence de votre marque.</p>
+                </div>
+
+                <!-- Service Card 3 -->
+                <div class="group service-card p-8 rounded-xl border border-white/10 hover:border-amber-400/50 bg-white/2 hover:bg-white/5 transition-all duration-300">
+                    <div class="text-5xl mb-6 text-amber-400 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-sparkles"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Branding</h3>
+                    <p class="text-white/60">Stratégies de branding complètes pour une présence marquante.</p>
+                </div>
+
+                <!-- Service Card 4 -->
+                <div class="group service-card p-8 rounded-xl border border-white/10 hover:border-amber-400/50 bg-white/2 hover:bg-white/5 transition-all duration-300">
+                    <div class="text-5xl mb-6 text-amber-400 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-tv"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Affiches & Print</h3>
+                    <p class="text-white/60">Design imprimé captivant pour tous les supports marketing.</p>
+                </div>
+
+                <!-- Service Card 5 -->
+                <div class="group service-card p-8 rounded-xl border border-white/10 hover:border-amber-400/50 bg-white/2 hover:bg-white/5 transition-all duration-300">
+                    <div class="text-5xl mb-6 text-amber-400 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">UI/UX Design</h3>
+                    <p class="text-white/60">Interfaces modernes et intuitives pour une meilleure expérience.</p>
+                </div>
+
+                <!-- Service Card 6 -->
+                <div class="group service-card p-8 rounded-xl border border-white/10 hover:border-amber-400/50 bg-white/2 hover:bg-white/5 transition-all duration-300">
+                    <div class="text-5xl mb-6 text-amber-400 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-film"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Motion Design</h3>
+                    <p class="text-white/60">Animations et vidéos créatives qui captivent l'attention.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="py-24 px-6 bg-white/2">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-5xl md:text-6xl font-bold mb-6 text-center">
+                <span class="bg-gradient-to-r from-amber-400 to-orange-400 bg-clip-text text-transparent">Portfolio</span>
+            </h2>
+            <p class="text-center text-white/60 mb-16 text-lg">Découvrez mes derniers projets et créations</p>
+
+            <!-- Filters -->
+            <div class="flex flex-wrap justify-center gap-4 mb-16">
+                <button class="filter-btn active px-6 py-2 rounded-full border border-amber-400/50 bg-amber-400/20 text-amber-300 font-semibold" data-filter="all">
+                    Tous
+                </button>
+                <button class="filter-btn px-6 py-2 rounded-full border border-white/10 hover:border-amber-400/50 text-white/70 font-semibold transition-all" data-filter="branding">
+                    Branding
+                </button>
+                <button class="filter-btn px-6 py-2 rounded-full border border-white/10 hover:border-amber-400/50 text-white/70 font-semibold transition-all" data-filter="print">
+                    Print
+                </button>
+                <button class="filter-btn px-6 py-2 rounded-full border border-white/10 hover:border-amber-400/50 text-white/70 font-semibold transition-all" data-filter="web">
+                    Web
+                </button>
+            </div>
+
+            <!-- Portfolio Grid -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Portfolio Item 1 -->
+                <div class="portfolio-item group rounded-xl overflow-hidden border border-white/10 hover:border-amber-400/50 cursor-pointer transition-all duration-300" data-category="branding">
+                    <div class="relative h-80 bg-gradient-to-br from-amber-500/20 to-orange-500/20 overflow-hidden">
+                        <img src="images/tech.jpg" alt="Tech Security" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
+                        <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                            <div class="text-center">
+                                <p class="text-amber-300 font-bold text-lg">Voir le projet</p>
+                                <i class="fas fa-arrow-right text-2xl mt-2"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Tech Security</h3>
+                        <p class="text-white/60 text-sm mb-4">Refonte complète de l'identité visuelle d'une startup fintech innovante.</p>
+                        <div class="flex gap-2 flex-wrap">
+                            <span class="text-xs bg-amber-400/20 text-amber-300 px-3 py-1 rounded-full">Branding</span>
+                            <span class="text-xs bg-amber-400/20 text-amber-300 px-3 py-1 rounded-full">Logo</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Portfolio Item 2 -->
+                <div class="portfolio-item group rounded-xl overflow-hidden border border-white/10 hover:border-amber-400/50 cursor-pointer transition-all duration-300" data-category="print">
+                    <div class="relative h-80 bg-gradient-to-br from-amber-500/20 to-orange-500/20 overflow-hidden">
+                        <img src="images/maga.jpg" alt="Magazine Culturel" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
+                        <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                            <div class="text-center">
+                                <p class="text-amber-300 font-bold text-lg">Voir le projet</p>
+                                <i class="fas fa-arrow-right text-2xl mt-2"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Magazine Culturel</h3>
+                        <p class="text-white/60 text-sm mb-4">Conception éditoriale pour un magazine mensuel d'art contemporain.</p>
+                        <div class="flex gap-2 flex-wrap">
+                            <span class="text-xs bg-amber-400/20 text-amber-300 px-3 py-1 rounded-full">Editorial</span>
+                            <span class="text-xs bg-amber-400/20 text-amber-300 px-3 py-1 rounded-full">Print</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Portfolio Item 3 -->
+                <div class="portfolio-item group rounded-xl overflow-hidden border border-white/10 hover:border-amber-400/50 cursor-pointer transition-all duration-300" data-category="branding">
+                    <div class="relative h-80 bg-gradient-to-br from-amber-500/20 to-orange-500/20 overflow-hidden">
+                        <img src="images/resto.jpg" alt="Restaurant Local" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
+                        <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                            <div class="text-center">
+                                <p class="text-amber-300 font-bold text-lg">Voir le projet</p>
+                                <i class="fas fa-arrow-right text-2xl mt-2"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Restaurant Local</h3>
+                        <p class="text-white/60 text-sm mb-4">Identité chaleureuse et authentique pour un restaurant local.</p>
+                        <div class="flex gap-2 flex-wrap">
+                            <span class="text-xs bg-amber-400/20 text-amber-300 px-3 py-1 rounded-full">Branding</span>
+                            <span class="text-xs bg-amber-400/20 text-amber-300 px-3 py-1 rounded-full">Packaging</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Portfolio Item 4 -->
+                <div class="portfolio-item group rounded-xl overflow-hidden border border-white/10 hover:border-amber-400/50 cursor-pointer transition-all duration-300" data-category="web">
+                    <div class="relative h-80 bg-gradient-to-br from-amber-500/20 to-orange-500/20 overflow-hidden">
+                        <img src="images/afrik.jpg" alt="AFRIK INFLUMAG" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
+                        <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                            <div class="text-center">
+                                <p class="text-amber-300 font-bold text-lg">Voir le projet</p>
+                                <i class="fas fa-arrow-right text-2xl mt-2"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">AFRIK INFLUMAG</h3>
+                        <p class="text-white/60 text-sm mb-4">Interface immersive pour une plateforme de Top influenceurs Africains.</p>
+                        <div class="flex gap-2 flex-wrap">
+                            <span class="text-xs bg-amber-400/20 text-amber-300 px-3 py-1 rounded-full">Web</span>
+                            <span class="text-xs bg-amber-400/20 text-amber-300 px-3 py-1 rounded-full">UI/UX</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Portfolio Item 5 -->
+                <div class="portfolio-item group rounded-xl overflow-hidden border border-white/10 hover:border-amber-400/50 cursor-pointer transition-all duration-300" data-category="branding">
+                    <div class="relative h-80 bg-gradient-to-br from-amber-500/20 to-orange-500/20 overflow-hidden">
+                        <img src="images/tech.jpg" alt="Projet Premium" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
+                        <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                            <div class="text-center">
+                                <p class="text-amber-300 font-bold text-lg">Voir le projet</p>
+                                <i class="fas fa-arrow-right text-2xl mt-2"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Projet Premium</h3>
+                        <p class="text-white/60 text-sm mb-4">Création d'une identité visuelle haut de gamme pour marque de luxe.</p>
+                        <div class="flex gap-2 flex-wrap">
+                            <span class="text-xs bg-amber-400/20 text-amber-300 px-3 py-1 rounded-full">Branding</span>
+                            <span class="text-xs bg-amber-400/20 text-amber-300 px-3 py-1 rounded-full">Luxury</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Portfolio Item 6 -->
+                <div class="portfolio-item group rounded-xl overflow-hidden border border-white/10 hover:border-amber-400/50 cursor-pointer transition-all duration-300" data-category="print">
+                    <div class="relative h-80 bg-gradient-to-br from-amber-500/20 to-orange-500/20 overflow-hidden">
+                        <img src="images/maga.jpg" alt="Campagne Print" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
+                        <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                            <div class="text-center">
+                                <p class="text-amber-300 font-bold text-lg">Voir le projet</p>
+                                <i class="fas fa-arrow-right text-2xl mt-2"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Campagne Print</h3>
+                        <p class="text-white/60 text-sm mb-4">Série d'affiches et supports imprimés pour campagne marketing.</p>
+                        <div class="flex gap-2 flex-wrap">
+                            <span class="text-xs bg-amber-400/20 text-amber-300 px-3 py-1 rounded-full">Print</span>
+                            <span class="text-xs bg-amber-400/20 text-amber-300 px-3 py-1 rounded-full">Affiches</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-24 px-6">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-5xl md:text-6xl font-bold mb-20 text-center">
+                <span class="bg-gradient-to-r from-amber-400 to-orange-400 bg-clip-text text-transparent">Compétences</span>
+            </h2>
+
+            <div class="grid md:grid-cols-2 gap-12 mb-20">
+                <!-- Skills Column 1 -->
+                <div class="space-y-8">
+                    <div>
+                        <div class="flex justify-between mb-3">
+                            <span class="font-bold">Photoshop</span>
+                            <span class="text-amber-400">95%</span>
+                        </div>
+                        <div class="h-2 bg-white/10 rounded-full overflow-hidden">
+                            <div class="skill-bar h-full bg-gradient-to-r from-amber-400 to-orange-400" style="width: 95%"></div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="flex justify-between mb-3">
+                            <span class="font-bold">Illustrator</span>
+                            <span class="text-amber-400">90%</span>
+                        </div>
+                        <div class="h-2 bg-white/10 rounded-full overflow-hidden">
+                            <div class="skill-bar h-full bg-gradient-to-r from-amber-400 to-orange-400" style="width: 90%"></div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="flex justify-between mb-3">
+                            <span class="font-bold">Figma</span>
+                            <span class="text-amber-400">88%</span>
+                        </div>
+                        <div class="h-2 bg-white/10 rounded-full overflow-hidden">
+                            <div class="skill-bar h-full bg-gradient-to-r from-amber-400 to-orange-400" style="width: 88%"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Skills Column 2 -->
+                <div class="space-y-8">
+                    <div>
+                        <div class="flex justify-between mb-3">
+                            <span class="font-bold">InDesign</span>
+                            <span class="text-amber-400">85%</span>
+                        </div>
+                        <div class="h-2 bg-white/10 rounded-full overflow-hidden">
+                            <div class="skill-bar h-full bg-gradient-to-r from-amber-400 to-orange-400" style="width: 85%"></div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="flex justify-between mb-3">
+                            <span class="font-bold">After Effects</span>
+                            <span class="text-amber-400">80%</span>
+                        </div>
+                        <div class="h-2 bg-white/10 rounded-full overflow-hidden">
+                            <div class="skill-bar h-full bg-gradient-to-r from-amber-400 to-orange-400" style="width: 80%"></div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="flex justify-between mb-3">
+                            <span class="font-bold">Blender</span>
+                            <span class="text-amber-400">75%</span>
+                        </div>
+                        <div class="h-2 bg-white/10 rounded-full overflow-hidden">
+                            <div class="skill-bar h-full bg-gradient-to-r from-amber-400 to-orange-400" style="width: 75%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Testimonials -->
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="p-8 rounded-xl border border-white/10 bg-white/2 hover:bg-white/5 transition-all">
+                    <div class="flex gap-1 mb-4">
+                        <i class="fas fa-star text-amber-400"></i>
+                        <i class="fas fa-star text-amber-400"></i>
+                        <i class="fas fa-star text-amber-400"></i>
+                        <i class="fas fa-star text-amber-400"></i>
+                        <i class="fas fa-star text-amber-400"></i>
+                    </div>
+                    <p class="text-white/70 mb-4">"Adélaïde a créé une identité visuelle remarquable pour notre startup. Professionnel, créatif et à l'écoute."</p>
+                    <p class="font-bold">Jean Dupont</p>
+                    <p class="text-sm text-white/50">PDG - Tech Security</p>
+                </div>
+
+                <div class="p-8 rounded-xl border border-white/10 bg-white/2 hover:bg-white/5 transition-all">
+                    <div class="flex gap-1 mb-4">
+                        <i class="fas fa-star text-amber-400"></i>
+                        <i class="fas fa-star text-amber-400"></i>
+                        <i class="fas fa-star text-amber-400"></i>
+                        <i class="fas fa-star text-amber-400"></i>
+                        <i class="fas fa-star text-amber-400"></i>
+                    </div>
+                    <p class="text-white/70 mb-4">"Un talent exceptionnelle. Adélaïde comprend parfaitement la vision et la met en œuvre de manière éclatante."</p>
+                    <p class="font-bold">Marie Leclerc</p>
+                    <p class="text-sm text-white/50">Directrice - Magazine Culturel</p>
+                </div>
+
+                <div class="p-8 rounded-xl border border-white/10 bg-white/2 hover:bg-white/5 transition-all">
+                    <div class="flex gap-1 mb-4">
+                        <i class="fas fa-star text-amber-400"></i>
+                        <i class="fas fa-star text-amber-400"></i>
+                        <i class="fas fa-star text-amber-400"></i>
+                        <i class="fas fa-star text-amber-400"></i>
+                        <i class="fas fa-star text-amber-400"></i>
+                    </div>
+                    <p class="text-white/70 mb-4">"Ravie du travail effectué. Adélaïde a dépassé mes attentes avec une créativité débordante."</p>
+                    <p class="font-bold">Sophie Martin</p>
+                    <p class="text-sm text-white/50">Fondatrice - Réïna Restaurant</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="py-24 px-6 bg-white/2">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-5xl md:text-6xl font-bold mb-20 text-center">
+                Mon <span class="bg-gradient-to-r from-amber-400 to-orange-400 bg-clip-text text-transparent">Processus</span>
+            </h2>
+
+            <div class="grid md:grid-cols-5 gap-8 relative">
+                <!-- Timeline Line -->
+                <div class="hidden md:block absolute top-32 left-0 right-0 h-1 bg-gradient-to-r from-amber-400/20 via-amber-400 to-amber-400/20 -z-10"></div>
+
+                <!-- Step 1 -->
+                <div class="text-center">
+                    <div class="w-16 h-16 mx-auto mb-6 rounded-full bg-gradient-to-r from-amber-400 to-orange-400 flex items-center justify-center text-2xl text-black font-bold">
+                        01
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Brief</h3>
+                    <p class="text-white/60">Comprendre votre vision, vos objectifs et vos attentes.</p>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="text-center">
+                    <div class="w-16 h-16 mx-auto mb-6 rounded-full bg-gradient-to-r from-amber-400 to-orange-400 flex items-center justify-center text-2xl text-black font-bold">
+                        02
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Recherche</h3>
+                    <p class="text-white/60">Analyse du marché et étude concurrentielle approfondie.</p>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="text-center">
+                    <div class="w-16 h-16 mx-auto mb-6 rounded-full bg-gradient-to-r from-amber-400 to-orange-400 flex items-center justify-center text-2xl text-black font-bold">
+                        03
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Conception</h3>
+                    <p class="text-white/60">Créativité débordante pour des designs exceptionnels.</p>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="text-center">
+                    <div class="w-16 h-16 mx-auto mb-6 rounded-full bg-gradient-to-r from-amber-400 to-orange-400 flex items-center justify-center text-2xl text-black font-bold">
+                        04
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Révision</h3>
+                    <p class="text-white/60">Retours constructifs et améliorations continues.</p>
+                </div>
+
+                <!-- Step 5 -->
+                <div class="text-center">
+                    <div class="w-16 h-16 mx-auto mb-6 rounded-full bg-gradient-to-r from-amber-400 to-orange-400 flex items-center justify-center text-2xl text-black font-bold">
+                        05
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Livraison</h3>
+                    <p class="text-white/60">Fichiers finaux optimisés et support post-projet.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-24 px-6">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-5xl md:text-6xl font-bold mb-6 text-center">
+                <span class="bg-gradient-to-r from-amber-400 to-orange-400 bg-clip-text text-transparent">Collaborons</span>
+            </h2>
+            <p class="text-center text-white/60 mb-16 text-lg">Prêt à transformer votre vision en réalité ?</p>
+
+            <div class="grid md:grid-cols-2 gap-12">
+                <!-- Contact Form -->
+                <div class="space-y-6">
+                    <form id="contactForm" class="space-y-6">
+                        <div>
+                            <label class="block text-sm font-semibold mb-2 text-white/80">Nom complet</label>
+                            <input type="text" required class="w-full px-6 py-3 rounded-lg bg-white/5 border border-white/10 focus:border-amber-400 focus:outline-none transition-colors" placeholder="Votre nom">
+                        </div>
+
+                        <div>
+                            <label class="block text-sm font-semibold mb-2 text-white/80">Email</label>
+                            <input type="email" required class="w-full px-6 py-3 rounded-lg bg-white/5 border border-white/10 focus:border-amber-400 focus:outline-none transition-colors" placeholder="votre@email.com">
+                        </div>
+
+                        <div>
+                            <label class="block text-sm font-semibold mb-2 text-white/80">Type de projet</label>
+                            <select class="w-full px-6 py-3 rounded-lg bg-white/5 border border-white/10 focus:border-amber-400 focus:outline-none transition-colors" required>
+                                <option value="">Sélectionnez un type</option>
+                                <option value="branding">Branding</option>
+                                <option value="logo">Logo Design</option>
+                                <option value="packaging">Packaging</option>
+                                <option value="web">Web Design</option>
+                                <option value="print">Print & Affiches</option>
+                                <option value="other">Autre</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label class="block text-sm font-semibold mb-2 text-white/80">Budget</label>
+                            <input type="text" class="w-full px-6 py-3 rounded-lg bg-white/5 border border-white/10 focus:border-amber-400 focus:outline-none transition-colors" placeholder="Ex: 5k - 10k €">
+                        </div>
+
+                        <div>
+                            <label class="block text-sm font-semibold mb-2 text-white/80">Message</label>
+                            <textarea rows="5" class="w-full px-6 py-3 rounded-lg bg-white/5 border border-white/10 focus:border-amber-400 focus:outline-none transition-colors" placeholder="Décrivez votre projet..."></textarea>
+                        </div>
+
+                        <button type="submit" class="w-full px-6 py-3 bg-gradient-to-r from-amber-400 to-orange-400 text-black font-bold rounded-lg hover:shadow-xl hover:shadow-amber-500/50 transition-all duration-300">
+                            Envoyer mon demande
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="space-y-8">
+                    <div class="p-6 rounded-xl border border-white/10 bg-white/2 hover:bg-white/5 transition-all">
+                        <div class="flex gap-4 items-start">
+                            <div class="w-12 h-12 rounded-lg bg-amber-400/20 flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-envelope text-amber-400 text-lg"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold mb-1">Email</h4>
+                                <p class="text-white/60"><a href="mailto:ruthdossa6@gmail.com">ruthdossa6@gmail.com</a></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="p-6 rounded-xl border border-white/10 bg-white/2 hover:bg-white/5 transition-all">
+                        <div class="flex gap-4 items-start">
+                            <div class="w-12 h-12 rounded-lg bg-amber-400/20 flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-phone text-amber-400 text-lg"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold mb-1">Téléphone</h4>
+                                <p class="text-white/60"><a href="tel:+22901669109999">+229 016 691 0999</a></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="p-6 rounded-xl border border-white/10 bg-white/2 hover:bg-white/5 transition-all">
+                        <div class="flex gap-4 items-start">
+                            <div class="w-12 h-12 rounded-lg bg-amber-400/20 flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-map-marker-alt text-amber-400 text-lg"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold mb-1">Localisation</h4>
+                                <p class="text-white/60">Abomey Calavi, Bénin</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="p-6 rounded-xl border border-white/10 bg-white/2 hover:bg-white/5 transition-all">
+                        <h4 class="font-bold mb-4">Réseaux sociaux</h4>
+                        <div class="flex gap-4">
+                            <a href="#" class="w-10 h-10 rounded-lg bg-amber-400/20 flex items-center justify-center text-amber-400 hover:bg-amber-400 hover:text-black transition-all">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="#" class="w-10 h-10 rounded-lg bg-amber-400/20 flex items-center justify-center text-amber-400 hover:bg-amber-400 hover:text-black transition-all">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                            <a href="#" class="w-10 h-10 rounded-lg bg-amber-400/20 flex items-center justify-center text-amber-400 hover:bg-amber-400 hover:text-black transition-all">
+                                <i class="fab fa-behance"></i>
+                            </a>
+                            <a href="#" class="w-10 h-10 rounded-lg bg-amber-400/20 flex items-center justify-center text-amber-400 hover:bg-amber-400 hover:text-black transition-all">
+                                <i class="fab fa-dribbble"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-white/5 py-12 px-6">
+        <div class="max-w-6xl mx-auto">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-8">
+                <div class="text-center md:text-left">
+                    <p class="text-white/60">© 2025 Adélaïde Ruth. Tous droits réservés.</p>
+                </div>
+                <div class="flex gap-8">
+                    <a href="#" class="text-white/60 hover:text-amber-400 transition-colors">Privacy</a>
+                    <a href="#" class="text-white/60 hover:text-amber-400 transition-colors">Terms</a>
+                    <a href="#" class="text-white/60 hover:text-amber-400 transition-colors">Sitemap</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

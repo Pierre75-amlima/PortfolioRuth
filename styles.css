@@ -1,0 +1,304 @@
+/* ===== CUSTOM STYLES ===== */
+
+* {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Syne', sans-serif;
+}
+
+/* ===== ANIMATIONS ===== */
+
+@keyframes fade-in-up {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slide-in-left {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slide-in-right {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes scale-up {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+@keyframes pulse-glow {
+    0%, 100% {
+        box-shadow: 0 0 20px rgba(217, 119, 6, 0.3);
+    }
+    50% {
+        box-shadow: 0 0 40px rgba(217, 119, 6, 0.5);
+    }
+}
+
+@keyframes shimmer {
+    0% {
+        background-position: -1000px 0;
+    }
+    100% {
+        background-position: 1000px 0;
+    }
+}
+
+/* ===== NAV LINKS ===== */
+.nav-link {
+    position: relative;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.7);
+    transition: color 0.3s ease;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, #fbbf24, #f97316);
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #fbbf24;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+/* ===== HERO SECTION ===== */
+.hero-title {
+    animation: fade-in-up 0.8s ease-out;
+    text-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+}
+
+.animated-text {
+    display: inline-block;
+    opacity: 0;
+    animation: fade-in-up 0.6s ease-out forwards;
+}
+
+/* ===== SERVICE CARDS ===== */
+.service-card {
+    animation: fade-in-up 0.6s ease-out both;
+}
+
+.service-card:nth-child(1) { animation-delay: 0s; }
+.service-card:nth-child(2) { animation-delay: 0.1s; }
+.service-card:nth-child(3) { animation-delay: 0.2s; }
+.service-card:nth-child(4) { animation-delay: 0.3s; }
+.service-card:nth-child(5) { animation-delay: 0.4s; }
+.service-card:nth-child(6) { animation-delay: 0.5s; }
+
+/* ===== PORTFOLIO ITEMS ===== */
+.portfolio-item {
+    animation: fade-in-up 0.6s ease-out both;
+}
+
+.portfolio-item:nth-child(1) { animation-delay: 0s; }
+.portfolio-item:nth-child(2) { animation-delay: 0.1s; }
+.portfolio-item:nth-child(3) { animation-delay: 0.2s; }
+.portfolio-item:nth-child(4) { animation-delay: 0.3s; }
+.portfolio-item:nth-child(5) { animation-delay: 0.4s; }
+.portfolio-item:nth-child(6) { animation-delay: 0.5s; }
+
+/* ===== SKILL BARS ===== */
+.skill-bar {
+    animation: fade-in-up 0.8s ease-out;
+    background-size: 200% 100%;
+    transition: all 0.3s ease;
+}
+
+/* ===== FILTER BUTTONS ===== */
+.filter-btn {
+    position: relative;
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+.filter-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, #fbbf24, #f97316);
+    transition: left 0.3s ease;
+    z-index: -1;
+}
+
+.filter-btn.active::before {
+    left: 0;
+}
+
+/* ===== FORM INPUTS ===== */
+input, select, textarea {
+    background: rgba(255, 255, 255, 0.05) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    color: white !important;
+    transition: all 0.3s ease;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    background: rgba(255, 255, 255, 0.08) !important;
+    border-color: rgba(251, 191, 36, 0.5) !important;
+    box-shadow: 0 0 20px rgba(251, 191, 36, 0.2);
+}
+
+/* ===== SCROLL REVEAL ===== */
+.scroll-reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.6s ease;
+}
+
+.scroll-reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ===== LAZY LOAD IMAGES ===== */
+img {
+    transition: all 0.3s ease;
+}
+
+img.lazy {
+    filter: blur(10px);
+}
+
+img.lazy.loaded {
+    filter: blur(0);
+}
+
+/* ===== GLOWING EFFECTS ===== */
+.glow-on-hover {
+    transition: all 0.3s ease;
+}
+
+.glow-on-hover:hover {
+    box-shadow: 0 0 40px rgba(251, 191, 36, 0.3);
+}
+
+/* ===== RESPONSIVE ADJUSTMENTS ===== */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    .hero-title {
+        font-size: 2.5rem !important;
+    }
+
+    .portfolio-grid {
+        grid-template-columns: 1fr !important;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr !important;
+    }
+}
+
+/* ===== ACCESSIBILITY ===== */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* ===== DARK MODE ENHANCEMENTS ===== */
+@media (prefers-color-scheme: dark) {
+    body {
+        background: #000;
+        color: #fff;
+    }
+}
+
+/* ===== CUSTOM SCROLLBAR ===== */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, #fbbf24, #f97316);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg, #f97316, #fbbf24);
+}
+
+/* ===== SELECTION ===== */
+::selection {
+    background: linear-gradient(135deg, #fbbf24, #f97316);
+    color: #000;
+}
+
+::-moz-selection {
+    background: linear-gradient(135deg, #fbbf24, #f97316);
+    color: #000;
+}
